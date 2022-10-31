@@ -19,10 +19,8 @@ body{
 header{
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
-    color: whitesmoke;
+    color: lightslategray;
     text-align: center;
-    stroke: black;
-stroke-width: 20px;
 }
 
 #new-todo-form{
@@ -63,5 +61,75 @@ input, button{
     margin-right: 1rem;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
+    cursor: pointer;
+    transition: 0.8s;
 }
 
+#new-todo-submit:hover{
+    opacity: 0.5;
+}
+
+#new-todo-submit:active{
+    opacity: 0.3;
+}
+
+.text-task{
+    margin-top: 20px;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: lightslategray;
+
+}
+
+#todos .todo{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    background: rgb(34, 34, 34);
+}
+
+
+#todos .todo .content .text{
+    color: blanchedalmond;
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+#todos .todo .content .text:not(:read-only){
+    color: brown;
+}
+
+#todos .todo .actions{
+    display: flex;
+}
+
+.todo .actions button{
+    cursor: pointer;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    transition: 0.5;
+
+}
+
+.todo .actions button:hover{
+    opacity: 0.5;
+}
+
+.todo .actions button:active{
+    opacity: 0.3;
+}
+
+.todo .actions .edit{
+    color: lightslategray;
+}
+.todo .actions .delete{
+    color: crimson;
+}
