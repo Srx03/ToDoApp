@@ -94,6 +94,10 @@ input, button{
     background: rgb(34, 34, 34);
 }
 
+#todos .todo .content{
+    flex: 1 1 0%;
+}
+
 
 #todos .todo .content .text{
     color: blanchedalmond;

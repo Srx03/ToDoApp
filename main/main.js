@@ -46,10 +46,29 @@ window.addEventListener('load', () => {
 
         todoElement.appendChild(todoActionsElement);
 
+        listElement.appendChild(todoElement);
+
         input.value = "";
 
+        todoEditElement.addEventListener('click', () =>{
 
-        listElement.appendChild(todoElement);
+        if(todoEditElement.innerText.toLowerCase() == "edit"){
+            todoInputElement.removeAttribute("readonly");
+            todoInputElement.focus();
+            todoEditElement.innerText = "Save";
+        }else{
+
+            todoInputElement.setAttribute("readonly", "readonly");
+            todoEditElement.innerText = "Edit";
+        }
+
+        })
+
+        todoDeleteElement.addEventListener('click',() =>{
+
+            listElement.removeChild(todoElement);
+
+        })
 
 
     })
